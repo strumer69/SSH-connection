@@ -20,8 +20,23 @@
 *  --> man ssh --> or search the internet
 *  ### connect:
 *  --> ssh -l (user) ()hostname --> example:
-*  --> ssh -l  di49zop lxlogin.lrz.de
+*  --> ssh -l  di49zop lxlogin.lrz.de --> alternate --> ssh user@lxlogin.lrz.de --> or--> ssh user@IP_address
 *  more info also:
 *  https://doku.lrz.de/access-and-login-to-the-linux-cluster-10745974.html
-*  
+*  ssh -Y cool.hpc.lrz.de -l (user)
+*  enter the pass
+*  then you need a second factor authentication
+*  ### ECDSA key fingerprint:
+*  is a unique identifier for an Elliptic Curve Digital Signature Algorithm (ECDSA) public key, used in SSH and other applications to verify the identity of a server or user. It's a shorter, more manageable representation of a potentially long public key, created by applying a cryptographic hash function to the key.
+*  ### commandsafter connection:
+*  suppose you are successfully connected. in the following you will see some common commands:
+*  --> hostname --> to see the host name
+*  --> logout --> to log out -- > alternative --> CTRL + D
+*  XXXX~> nslookup  lxlogin.lrz.de --> to see the IP Adress of the server
+- Server:		10.156.33.53
+- Address:	10.156.33.53#53
+* alternative way for connecting --> ssh user@IP_address
+* ## some convenient:
+* 
+
 *  
