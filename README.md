@@ -37,6 +37,26 @@
 - Address:	10.156.33.53#53
 * alternative way for connecting --> ssh user@IP_address
 * ## some convenient:
-* 
+* ### vim editor:
+  - vim notes.txt - Open file
+  - i - Start editing
+  - Type your text
+  - Esc - Stop editing
+  - :w    save text
+  - :q quit
+  - :wq - Save and exit
+* ### config file:
+* Config file, store setting for applications. when we use a ready to copy config file to increase the speed of working
+* --> man ssh_config --> to know more about how to use config file
+* example:
+* touch config --> create an empty config file
+* vim config --> go and write the following lines in it:
+  - alias 11='echo hallo '
+  - alias 12='echo wie gehts?'
+* --> save the file
+* --> source ~/config --> from now, if you call 11 or 12 you will receive the following messages:
+* 11 --> hallo
+* 12 --> wie gehts?
+
 
 *  
