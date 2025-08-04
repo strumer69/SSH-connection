@@ -9,24 +9,24 @@
 * 4- credential --> userID and Password
 * 5- the name of the machine --> 1xlogin.lrz.de or (IP : 129.187.20.101)
 ### check the version of the ssh in client machine:
-* --> ssh -V
+* --> **ssh -V**
 * it will show the version of the ssh client on your laptop. the more recent the version the better. for example mine is as follow:
   - (base) shahram@shahram-X556UB:~$ ssh -V
   - OpenSSH_9.6p1 Ubuntu-3ubuntu13.13, OpenSSL 3.0.13 30 Jan 2024
-*  ### common options:
+### common options:
 *  -->ssh -h
 *  ssh has lots of optiones , but you will use only few of them on a regular basis.
 *  for more detailed explanation:
 *  --> man ssh --> or search the internet
-*  ### connect:
+### connect:
 *  --> ssh -l (user) ()hostname --> example:
 *  --> ssh -l  di49zop lxlogin.lrz.de --> alternate --> ssh user@lxlogin.lrz.de --> or--> ssh user@IP_address
 *  more info also:
 *  https://doku.lrz.de/access-and-login-to-the-linux-cluster-10745974.html
-*  ssh -Y cool.hpc.lrz.de -l (user)
+*  **ssh -Y cool.hpc.lrz.de -l (user)**
 *  enter the pass
 *  then you need a second factor authentication
-*  ### ECDSA key fingerprint:
+### ECDSA key fingerprint:
 *  is a unique identifier for an Elliptic Curve Digital Signature Algorithm (ECDSA) public key, used in SSH and other applications to verify the identity of a server or user. It's a shorter, more manageable representation of a potentially long public key, created by applying a cryptographic hash function to the key.
 *  ### commandsafter connection:
 *  suppose you are successfully connected. in the following you will see some common commands:
@@ -36,7 +36,7 @@
 - Server:		10.156.33.53
 - Address:	10.156.33.53#53
 * alternative way for connecting --> ssh user@IP_address
-* ## some convenient:
+## some convenient:
 * ### vim editor:
   - vim notes.txt - Open file
   - i - Start editing
@@ -57,6 +57,16 @@
 * --> source ~/config --> from now, if you call 11 or 12 you will receive the following messages:
 * 11 --> hallo
 * 12 --> wie gehts?
-
-
-*  
+##   Simple troubleshooting
+* there may be different possibilities for bug or failiur in connction.
+* the first check can be (ping command) to check the availability of the server.
+* --> ping lrz.de
+## SSH key handeling
+* link: https://smarty.userweb.mwn.de/movies/Sshkeyhandling.mp4
+* **public key**:  I share it with the server to encript my messages. but I will keep the **Private key** with my self. in this way (only me) can decrypt the messages. because I have the both public and private key.--> so we can use these key pairs instead of (user and password) credentials.
+## ssh key generation:
+* first step is to create these pair of key. --> we can use it for one session and then trough it a way . for anither session we will create another pair.
+* **ssh-keygen** --> command for creating a general key
+* It will ask where to save the key --> just press Enter to use the **default location**.
+* then It will ask for a passphrase: --> try to remember it :)
+* --> **ssh-copy-id -i ~/default_location.pub username@lx1.lrz.de**--> replace (lx1.lrz.de)  with the appropriate LRZ server.
