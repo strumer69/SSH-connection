@@ -70,3 +70,6 @@
 * It will ask where to save the key --> just press Enter to use the **default location**.
 * then It will ask for a passphrase: --> try to remember it :)
 * --> **ssh-copy-id -i ~/default_location.pub username@lx1.lrz.de**--> replace (lx1.lrz.de)  with the appropriate LRZ server.
+* ??? --> I could not establish a connection via this method  succesfully yet.
+## SSH agent handling
+* 
