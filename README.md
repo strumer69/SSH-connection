@@ -36,6 +36,8 @@
 - Server:		10.156.33.53
 - Address:	10.156.33.53#53
 * alternative way for connecting --> ssh user@IP_address
+## ----------------------------------------------------------------------------------
+
 ## some convenient:
 * ### vim editor:
   - vim notes.txt - Open file
@@ -57,6 +59,7 @@
 * --> source ~/config --> from now, if you call 11 or 12 you will receive the following messages:
 * 11 --> hallo
 * 12 --> wie gehts?
+## ----------------------------------------------------------------------------------
 ##   Simple troubleshooting
 * there may be different possibilities for bug or failiur in connction.
 * the first check can be (ping command) to check the availability of the server.
@@ -64,12 +67,20 @@
 ## SSH key handeling
 * link: https://smarty.userweb.mwn.de/movies/Sshkeyhandling.mp4
 * **public key**:  I share it with the server to encript my messages. but I will keep the **Private key** with my self. in this way (only me) can decrypt the messages. because I have the both public and private key.--> so we can use these key pairs instead of (user and password) credentials.
+## ----------------------------------------------------------------------------------
 ## ssh key generation:
 * first step is to create these pair of key. --> we can use it for one session and then trough it a way . for anither session we will create another pair.
+### step1 
 * **ssh-keygen** --> command for creating a general key
 * It will ask where to save the key --> just press Enter to use the **default location**.
 * then It will ask for a passphrase: --> try to remember it :)
-* --> **ssh-copy-id -i ~/default_location.pub username@lx1.lrz.de**--> replace (lx1.lrz.de)  with the appropriate LRZ server.
-* ??? --> I could not establish a connection via this method  succesfully yet.
+* This creates two files:
+-  ~/.ssh/id_rsa → your private key
+-  ~/.ssh/id_rsa.pub → your public key
+### step2: Copy the public key to the remote server:
+-  **ssh-copy-id -i ~/.ssh/id_rsa.pub username@lx1.lrz.de**--> replace (lx1.lrz.de)  with the appropriate LRZ server.
+-  here we will be asked for the last time for the main password for set up the key
+### now you can login with easier password:
+-  ssh username@remote-server-ip
 ## SSH agent handling
 * 
