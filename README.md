@@ -80,7 +80,8 @@
 ### step2: Copy the public key to the remote server:
 -  **ssh-copy-id -i ~/.ssh/id_rsa.pub username@lx1.lrz.de**--> replace (lx1.lrz.de)  with the appropriate LRZ server.
 -  here we will be asked for the last time for the main password for set up the key
-### now you can login with easier password:
--  ssh username@remote-server-ip
+### now you can login with less challenge:
+-  ssh username@cool.hpc.lrz.de
+* I could not login with this method , but I think I learned it :)
 ## SSH agent handling
 * 
