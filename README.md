@@ -89,4 +89,9 @@
 # GWDG:
 * in germany: --> Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen
 * translated to --> Society for Scientific Data Processing mbH Göttingen
-* 
+* from the pdf 1 :
+* page 3/19 --> SSH clients :
+  * OpenSSH,
+  * MobaXterm,
+  * PuTTY
+* d
