@@ -84,4 +84,9 @@
 -  ssh username@cool.hpc.lrz.de
 * I could not login with this method , but I think I learned it :)
 ## SSH agent handling
+* to be continued from the following link:
+* https://doku.lrz.de/ssh-tutorial-10746941.html
+# GWDG:
+* in germany: --> Gesellschaft für wissenschaftliche Datenverarbeitung mbH Göttingen
+* translated to --> Society for Scientific Data Processing mbH Göttingen
 * 
